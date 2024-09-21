@@ -1,0 +1,236 @@
+html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: url('img/bubbly-psyduck-art-wnm8blffxpdj2.jpg') no-repeat center center/cover;
+}
+.title{
+  margin: 10px;
+  background-color: rgb(255, 48, 152);
+  height: 400px;
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing:content-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+h1{
+  font-family: "Josefin Sans", "Fascinate Inline", "SUSE",system-ui,sans-serif;
+}
+h2{
+  font-family:"Inria Sans", sans-serif,
+  "Space Mono", "Nova Mono", monospace;
+  text-align: center;
+}
+.bn31 {
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: #000000;
+  display: block;
+  height: 50px;
+  font-size: 1.4em;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 7em;
+  z-index: 2;
+}
+
+.bn31:hover {
+  color: #fff;
+}
+
+.bn31 .bn31span {
+  align-items: center;
+  background: #aa00ff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn31:hover .bn31span {
+  background: transparent;
+}
+
+.heart{
+  margin-top: 10vh;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: relative;
+  box-shadow: 10px 10px 90px #ef2044;
+  animation: animHeart .6s linear infinite;
+}
+@keyframes animHeart {
+  0%{
+    transform: rotate(-45deg) scale(1.07);
+  }
+  80%{
+    transform: rotate(-45deg) scale(1);
+  }
+  100%{
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+.heart::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f20044;
+  box-shadow: -10px 10px 90px #f20044;
+  top: -50%;
+  border-radius: 50%;
+}
+.heart::after{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f20044;
+  box-shadow: -10px 10px 90px #f20044;
+  right : -50%;
+  border-radius: 50%;
+}
+@media (width < 1360px) {
+  html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: url('img/bubbly-psyduck-art-wnm8blffxpdj2.jpg') no-repeat left center/cover;
+  }
+  .title{
+    margin: 10px;
+    height: 400px;
+    width: 480px;
+    padding: 10px;
+  }
+  h1{
+    font-size: 30px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  .heart{
+    margin-top: 10vh;
+    height: 80px;
+    width: 80px;
+  }
+  
+  .heart::before{
+    width: 80px;
+    height: 80px;
+  }
+  .heart::after{
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (height < 530px) {
+  .heart{
+    margin-top: 10vh;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .heart::before{
+    width: 50px;
+    height: 50px;
+  }
+  .heart::after{
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (width < 1044px) {
+  html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: url('img/bubbly-psyduck-art-wnm8blffxpdj2.jpg') no-repeat left center/cover;
+  }
+  .title{
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+  }
+  h1{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 15px;
+  }
+}
+@media (width < 950px) {
+  html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: url('img/bubbly-psyduck-art-wnm8blffxpdj2.jpg') no-repeat center center/cover;
+  }
+}
+@media (width < 426px) {
+  html{
+    background: url(/img/chubby-baby-psyduck-99o8fl8xrwek.jpg) no-repeat center center/cover;
+  }
+  .title{
+  background-color: rgb(255, 48, 152);
+  height: 250px;
+  width: 320px;
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing:content-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+  h1{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 15px;
+  }
+  .bn31 {
+    height: 35px;
+    width: 200px;
+  }
+span{
+  font-size: 20px;
+}
+.heart{
+  margin-top: 1vh;
+  height: 20px;
+  width: 20px;}
+
+.heart::before{
+  width: 20px;
+  height: 20px;
+}
+.heart::after{
+  width: 20px;
+  height: 20px;
+}
+  
+}
