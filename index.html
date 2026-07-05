@@ -24,30 +24,30 @@
             <a href="pages/graduation.html" class="btn btn-primary">¡Feliz Graduación! 🎓</a>
             <button id="locked-birthday" class="btn btn-locked">Siguiente Nivel 🔒</button>
         </div>
-        
-        <!-- Locked Birthday Modal -->
-        <div id="riddle-modal" class="modal-overlay">
-            <div class="modal-content glass-card">
-                <h2>Acceso Restringido 🔐</h2>
-                <p class="modal-desc">Para ver un adelanto de tu próxima categoría, debes resolver este acertijo:</p>
-                <div class="riddle-box">
-                    <p class="riddle-text">
-                        "De los números que abren puertas, <br>
-                        sumo 9 si sumas mis dos dígitos. <br>
-                        Soy exactamente los meses de un año y medio. <br>
-                        Quien me alcanza, la adultez acaricia." <br>
-                        ¿Qué número soy?
-                    </p>
-                </div>
-                <input type="text" id="riddle-answer" placeholder="Tu respuesta..." class="riddle-input">
-                <p id="riddle-msg" class="riddle-msg"></p>
-                <div class="modal-actions">
-                    <button id="check-riddle" class="btn btn-primary">Comprobar</button>
-                    <button id="close-modal" class="btn btn-secondary">Me rindo</button>
-                </div>
+    </main>
+
+    <!-- Locked Birthday Modal -->
+    <div id="riddle-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <h2>Acceso Restringido 🔐</h2>
+            <p class="modal-desc">Para ver un adelanto de tu próxima categoría, debes resolver este acertijo:</p>
+            <div class="riddle-box">
+                <p class="riddle-text">
+                    "De los números que abren puertas, <br>
+                    sumo 9 si sumas mis dos dígitos. <br>
+                    Soy exactamente los meses de un año y medio. <br>
+                    Quien me alcanza, la adultez acaricia." <br>
+                    ¿Qué número soy?
+                </p>
+            </div>
+            <input type="text" id="riddle-answer" placeholder="Tu respuesta..." class="riddle-input">
+            <p id="riddle-msg" class="riddle-msg"></p>
+            <div class="modal-actions">
+                <button id="check-riddle" class="btn btn-primary">Comprobar</button>
+                <button id="close-modal" class="btn btn-secondary">Me rindo</button>
             </div>
         </div>
-    </main>
+    </div>
     
     <script>
         const btnLocked = document.getElementById('locked-birthday');
