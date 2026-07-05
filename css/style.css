@@ -1,0 +1,148 @@
+:root {
+    /* Paleta Snoopy & Celeste */
+    --bg-color: #E0F2FE; /* Azul celeste claro (fondo) */
+    --card-bg: #FFFFFF; /* Blanco limpio para la tarjeta */
+    --text-main: #0F172A; /* Carbón / casi negro (bordes Snoopy) */
+    --text-muted: #475569; /* Gris oscuro para subtítulos */
+    --primary-color: #0EA5E9; /* Azul celeste más intenso para botones */
+    --primary-hover: #0284C7; /* Azul hover */
+    
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Tipografía fluida y responsiva (Skills responsive-design) */
+    --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --text-title: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at top right, #F0F9FF, #E0F2FE);
+    font-family: var(--font-body);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(16px, 3vw, 32px);
+}
+
+/* 
+  Contenedor responsivo:
+  Crece hasta 800px en monitores grandes, pero se adapta al 95% en móviles.
+*/
+.card-container {
+    background-color: var(--card-bg);
+    width: 95%;
+    max-width: 800px; /* Mucho más grande para desktop */
+    padding: clamp(32px, 5vw, 64px) clamp(24px, 4vw, 48px);
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.circle-img {
+    width: clamp(100px, 15vw, 160px);
+    height: clamp(100px, 15vw, 160px);
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: clamp(24px, 3vw, 32px);
+    border: 4px solid var(--bg-color);
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: var(--text-title);
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.subtitle {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: clamp(32px, 5vw, 48px);
+    max-width: 600px;
+    margin-inline: auto; /* Centrar texto */
+}
+
+/* 
+  Botones responsivos:
+  Columna en móvil, fila en pantallas >= 640px
+*/
+.buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 640px) {
+    .buttons-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    font-size: var(--text-base);
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 9999px; /* Pill shape - moderno */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: var(--font-heading);
+}
+
+/* Botón 1: Azul celeste resaltado */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.4);
+}
+
+/* Botón 2: Carbón Snoopy (Blanco y negro) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--text-main);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-main);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
