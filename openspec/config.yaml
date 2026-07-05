@@ -1,0 +1,14 @@
+testing:
+  strict_tdd: false
+  test_runner: null
+  test_layers: null
+  coverage: null
+  linter: null
+  formatter: null
+  type_checker: null
+
+persistence:
+  mode: openspec
+
+stack:
+  language: html-css-js
